@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Bill</title>
+    <link rel="stylesheet" th:href="@{/css/styles.css}">
+</head>
+<body>
+    <h1>Bill Details</h1>
+    <p>ID: <span th:text="${bill.id}">1</span></p>
+    <p>Client Name: <span th:text="${bill.clientName}">John Doe</span></p>
+    <p>Medication: <span th:text="${bill.medication}">Aspirin</span></p>
+    <p>Amount: <span th:text="${bill.amount}">10.0</span></p>
+    <a th:href="@{/bills}">Back to Bills</a>
+</body>
+</html>

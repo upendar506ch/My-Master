@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Create Bill</title>
+    <link rel="stylesheet" th:href="@{/css/styles.css}">
+</head>
+<body>
+    <h1>Create Bill</h1>
+    <form th:action="@{/bills}" th:object="${bill}" method="post">
+        <label for="clientName">Client Name:</label>
+        <input type="text" id="clientName" name="clientName" th:field="*{clientName}" required>
+        <br>
+        <label for="medication">Medication:</label>
+        <input type="text" id="medication" name="medication" th:field="*{medication}" required>
+        <br>
+        <label for="amount">Amount:</label>
+        <input type="number" id="amount" name="amount" th:field="*{amount}" required>
+        <br>
+        <button type="submit">Create Bill</button>
+    </form>
+    <a th:href="@{/bills}">Back to Bills</a>
+</body>
+</html>
